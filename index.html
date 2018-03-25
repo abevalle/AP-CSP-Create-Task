@@ -4,6 +4,9 @@
 	<title>Javascript movie reviewer</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-dark bg-dark">
@@ -101,15 +104,46 @@
 			<div class="row" id="class11"></div>
 			<div class="row" id="class12"></div>
 
-		  <input type="button" id="submit" value="Calculate" class="btn btn-success">
-		  <input type="reset" id="reset" value="Reset" class="btn btn-default">
-		  <span id="addClass" class="float-right">Add class</span>
+		   <div class="buttons container">
+			  <input type="button" id="submit" value="Calculate" class="btn btn-success">
+			  <input type="reset" id="reset" value="Reset" class="btn btn-default">
+			  <span id="addClass" class="float-right">Add class</span>
+		   </div>
 		</form>
 	</div>
 
-	<p id="totalGPA">Your GPA: </p>
+	<p id="totalGPA" align="center">Your GPA: </p>
 
 	<script type="text/javascript" src="index.js"></script>
+	<!-- <script type="text/javascript">
+    $(window).on('load',function(){
+        $('#exampleModalCenter').modal('show');
+    });
+	</script> -->
 </div>
 </body>
 </html>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">GPA Calculator</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<h3>More stuff!</h3>
+      	<ul>
+      		<li><a href="abevalle.com">Abevalle.com</a></li>
+      		<li><a href="blog.arbitrary.space">Blog</a></li>
+      	</ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
