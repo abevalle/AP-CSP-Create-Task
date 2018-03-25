@@ -35,32 +35,45 @@ function calcGpa() {
 	console.log(classArray);
 	console.log('Class grades');
 	console.log(gradeArray);
+	/*adds all the grades together in the array gradArray*/
 	var grossGpa = gradeArray.reduce(add,0);
+	/*divides grossGpa by classCount then roudns it to the second decimal point*/
 	var netGpa = Math.round(grossGpa/classCount * 100)/100;
+	/*logs netGpa to console*/
 	console.log(netGpa);
+	/*resets arrays*/
 	reset();
+	/*prints GPA to html*/
 	document.getElementById('totalGPA').innerHTML = 'Your GPA: ' + netGpa;
 }
 
+/*I used this to add all the items in an array*/
 function add(a, b) {
 	return a + b;
 }
 
 function reset() {
+	/*Clears arrays*/
 	gradeArray.length = 0;
 	classArray.length = 0;
+	/*double checking to make sure they are clear*/
 	console.log(gradeArray);
 	console.log(classArray);
 }
 
+/*add class functions*/
 function addClass() {
+		/*checkig if at max classes*/
 		if (classCount == 12) {
+			/*if there are too many classes it will error out*/
 		console.log('Too many classes')
 		console.log('You have ' + classCount + ' classes')
 	} else {
+		/*if there is less than 12 it will add 1 class every click*/
 		classCount++
 
 		console.log(classCount)
+		/*added the class HTML*/
 		document.getElementById(`class${classCount}`).innerHTML = `
 			<div class="col">
 		    	<label>Class name</label>
@@ -81,6 +94,7 @@ function addClass() {
 
 }
 
+/*event listeners to know when things happen*/
 /*When the submit button is clicked it will run calcGPA()*/
 document.getElementById('submit').onclick = function() {calcGpa()};
 document.getElementById('reset').onclick = function() {reset()};
