@@ -54,26 +54,28 @@ function reset() {
 }
 
 function addClass() {
-		if (classCount == 13) {
+		if (classCount == 12) {
 		console.log('Too many classes')
-		classCount--
+		console.log('You have ' + classCount + ' classes')
 	} else {
 		classCount++
 
 		console.log(classCount)
 		document.getElementById(`class${classCount}`).innerHTML = `
-
-		<div>
-			<input type="text" id="className${classCount}" placeholder="Class name">
-			<label>Grade</label>
-			<select id="grade${classCount}">
-				<option value="A">A</option>
-				<option value="B">B</option>
-				<option value="C">C</option>
-				<option value="D">D</option>
-				<option value="F">F</option>
-			</select>
-		</div>`
+			<div class="col">
+		    	<label>Class name</label>
+				<input type="text" id="className${classCount}" class="form-control" placeholder="Class name">
+		    </div>
+		    <div class="col">
+		    	<label>Grade</label>
+				<select class="form-control" id="grade${classCount}">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="F">F</option>
+				</select>
+		    </div>`
 
 	}
 

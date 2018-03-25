@@ -3,77 +3,113 @@
 <head>
 	<title>Javascript movie reviewer</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
+	<nav class="navbar navbar-dark bg-dark">
+		<a href="#" class="navbar-brand">GPA calculator</a>
+	</nav>
 
-<form id="gpaCalc">
-	<div id="class1">
-	<input type="text" id="className1" placeholder="Class name">
-		<label>Grade</label>
-		<select id="grade1">
-			<option value="A">A</option>
-			<option value="B">B</option>
-			<option value="C">C</option>
-			<option value="D">D</option>
-			<option value="F">F</option>
-		</select>
+	<div class="container-fluid">
+		<form>
+		  <div class="row" id="class1">
+		    <div class="col">
+		    	<label>Class name</label>
+				<input type="text" id="className1" class="form-control" placeholder="Class name">
+		    </div>
+		    <div class="col">
+		    	<label>Grade</label>
+				<select class="form-control" id="grade1">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="F">F</option>
+				</select>
+		    </div>
+		  </div>
+		  <div class="row" id="class2">
+		    <div class="col">
+		    	<label>Class name</label>
+				<input type="text" id="className2" class="form-control" placeholder="Class name">
+		    </div>
+		    <div class="col">
+		    	<label>Grade</label>
+				<select class="form-control" id="grade2">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="F">F</option>
+				</select>
+		    </div>
+		  </div>
+		  <div class="row" id="class3">
+		    <div class="col">
+		    	<label>Class name</label>
+				<input type="text" id="className3" class="form-control" placeholder="Class name">
+		    </div>
+		    <div class="col">
+		    	<label>Grade</label>
+				<select class="form-control" id="grade3">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="F">F</option>
+				</select>
+		    </div>
+		  </div>
+		  <div class="row" id="class4">
+		    <div class="col">
+		    	<label>Class name</label>
+				<input type="text" id="className4" class="form-control" placeholder="Class name">
+		    </div>
+		    <div class="col">
+		    	<label>Grade</label>
+				<select class="form-control" id="grade4">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="F">F</option>
+				</select>
+		    </div>
+		  </div>
+		  <div class="row" id="class5">
+		    <div class="col">
+		    	<label>Class name</label>
+				<input type="text" id="className5" class="form-control" placeholder="Class name">
+		    </div>
+		    <div class="col">
+		    	<label>Grade</label>
+				<select class="form-control" id="grade5">
+					<option value="A">A</option>
+					<option value="B">B</option>
+					<option value="C">C</option>
+					<option value="D">D</option>
+					<option value="F">F</option>
+				</select>
+		    </div>
+		  </div>
+
+			<div class="row" id="class6"></div>
+			<div class="row" id="class7"></div>
+			<div class="row" id="class8"></div>
+			<div class="row" id="class9"></div>
+			<div class="row" id="class10"></div>
+			<div class="row" id="class11"></div>
+			<div class="row" id="class12"></div>
+
+		  <input type="button" id="submit" value="Calculate" class="btn btn-success">
+		  <input type="reset" id="reset" value="Reset" class="btn btn-default">
+		  <span id="addClass" class="float-right">Add class</span>
+		</form>
 	</div>
-	<div id="class2">
-	<input type="text" id="className2" placeholder="Class name">
-		<label>Grade</label>
-		<select id="grade2">
-			<option value="A">A</option>
-			<option value="B">B</option>
-			<option value="C">C</option>
-			<option value="D">D</option>
-			<option value="F">F</option>
-		</select>
-	</div>
-	<div id="class3">
-	<input type="text" id="className3" placeholder="Class name">
-		<label>Grade</label>
-		<select id="grade3">
-			<option value="A">A</option>
-			<option value="B">B</option>
-			<option value="C">C</option>
-			<option value="D">D</option>
-			<option value="F">F</option>
-		</select>
-	</div>
-	<div id="class4">
-	<input type="text" id="className4" placeholder="Class name">
-		<label>Grade</label>
-		<select id="grade4">
-			<option value="A">A</option>
-			<option value="B">B</option>
-			<option value="C">C</option>
-			<option value="D">D</option>
-			<option value="F">F</option>
-		</select>
-	</div>
-	<div id="class5">
-	<input type="text" id="className5" placeholder="Class name">
-		<label>Grade</label>
-		<select id="grade5">
-			<option value="A">A</option>
-			<option value="B">B</option>
-			<option value="C">C</option>
-			<option value="D">D</option>
-			<option value="F">F</option>
-		</select>
-	</div>
-	<div id="class6"></div>
-	<div id="class7"></div>
-	<div id="class8"></div>
-	<div id="class9"></div>
-	<div id="class10"></div>
-	<div id="class11"></div>
-	<div id="class12"></div>
-	<input type="button" id="submit" value="Submit">
-	<input type="reset" id="reset" value="Reset">
-</form>
-<a id="addClass">add class</a>
-<p id="totalGPA">Your GPA:</p>
-<script type="text/javascript" src="index.js"></script>
+
+	<p id="totalGPA">Your GPA: </p>
+
+	<script type="text/javascript" src="index.js"></script>
+</div>
 </body>
 </html>
