@@ -10,7 +10,6 @@ var gradeArray = []
 var classArray = []
 var classCount = 5
 var gradeClean = []
-
 /*This function is made to gather the input from the form*/
 function getGrade() {
 	/*loops through all the inputs gathering info*/
@@ -43,8 +42,13 @@ function calcGpa() {
 	console.log(netGpa);
 	/*resets arrays*/
 	reset();
+	return netGpa;
+}
+
+function printGPA() {
+	calcGpa()
 	/*prints GPA to html*/
-	document.getElementById('totalGPA').innerHTML = 'Your GPA: ' + netGpa;
+	document.getElementById('totalGPA').innerHTML = 'Your GPA: ' + calcGpa();
 }
 
 /*I used this to add all the items in an array*/
@@ -94,8 +98,28 @@ function addClass() {
 
 }
 
+
+// GPA projection Script.
+
+//get Sem 1 GPA
+
+//get gpa from 1st function
+function calcCumGpa() {
+	var netGpa = calcGpa();
+	var sem1 = document.getElementById('sem1').value;
+	//Calculation for cumGpa
+	var cumGpa = sem1*netGpa/2
+
+	document.getElementById('cumGpa').innerHTML = cumGpa;
+}
+
+//prints cumGpa to html
+
+
+
 /*event listeners to know when things happen*/
 /*When the submit button is clicked it will run calcGPA()*/
-document.getElementById('submit').onclick = function() {calcGpa()};
+document.getElementById('submit').onclick = function() {printGPA()};
 document.getElementById('reset').onclick = function() {reset()};
 document.getElementById('addClass').onclick = function() {addClass()};
+document.getElementById('calcCum').onclick = function() {calcCumGpa()};
