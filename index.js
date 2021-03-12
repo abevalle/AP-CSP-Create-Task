@@ -8,7 +8,7 @@ var F = 0
 /*Setting global variables*/
 var gradeArray = []
 var classArray = []
-var classCount = 5
+var classCount = 1
 var gradeClean = []
 /*This function is made to gather the input from the form*/
 function getGrade() {
